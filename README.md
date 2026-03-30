@@ -48,14 +48,14 @@ You can install Postman via this website: https://www.postman.com/downloads/
     (You might want to use `cargo check` if you only need to verify your work without running the app.)
 
 ## Mandatory Checklists (Publisher)
--   [ ] Clone https://gitlab.com/ichlaffterlalu/bambangshop to a new repository.
+-   [x] Clone https://gitlab.com/ichlaffterlalu/bambangshop to a new repository.
 -   **STAGE 1: Implement models and repositories**
-    -   [ ] Commit: `Create Subscriber model struct.`
-    -   [ ] Commit: `Create Notification model struct.`
-    -   [ ] Commit: `Create Subscriber database and Subscriber repository struct skeleton.`
-    -   [ ] Commit: `Implement add function in Subscriber repository.`
-    -   [ ] Commit: `Implement list_all function in Subscriber repository.`
-    -   [ ] Commit: `Implement delete function in Subscriber repository.`
+    -   [x] Commit: `Create Subscriber model struct.`
+    -   [x] Commit: `Create Notification model struct.`
+    -   [x] Commit: `Create Subscriber database and Subscriber repository struct skeleton.`
+    -   [x] Commit: `Implement add function in Subscriber repository.`
+    -   [x] Commit: `Implement list_all function in Subscriber repository.`
+    -   [x] Commit: `Implement delete function in Subscriber repository.`
     -   [ ] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
     -   [ ] Commit: `Create Notification service struct skeleton.`
@@ -77,7 +77,13 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+Saya melihat bahwa pemakaian rust ada jalur alternatifnya tetapi untuk pattern observable tidak banyak yang berubah jadi untuk kasus
+BambangShop kita tetap membutuhkan interface.
 
 #### Reflection Publisher-2
+Saya cukup percaya penggunaan DashMap sangat dibutuhkan karena adanya key yang unique (yaitu id dan url). Secara umum bentuk id dan url
+pasti bukan seperti angka yang incremental dan oleh karena itu penggunaan DashMap cocok karena value bisa diambil dengan custom key yang dibuat
+oleh id dan url.
 
 #### Reflection Publisher-3
+Kita tetap membutuhkan DashMap karena Singleton sendiri tidak cukup untuk memecahkan masalah concurrency. Ditambah tutorial ini menggunkaan rust dan untuk Singleton itu sangat tidak cocok karena tidak mungkin membuat multiple code mengubah data yang sama di waktu yang sama.
