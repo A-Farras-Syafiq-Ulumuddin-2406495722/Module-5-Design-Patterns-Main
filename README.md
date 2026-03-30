@@ -56,7 +56,7 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement add function in Subscriber repository.`
     -   [x] Commit: `Implement list_all function in Subscriber repository.`
     -   [x] Commit: `Implement delete function in Subscriber repository.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
+    -   [x] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
     -   [ ] Commit: `Create Notification service struct skeleton.`
     -   [ ] Commit: `Implement subscribe function in Notification service.`
@@ -77,13 +77,14 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
-Saya melihat bahwa pemakaian rust ada jalur alternatifnya tetapi untuk pattern observable tidak banyak yang berubah jadi untuk kasus
+1. Saya melihat bahwa pemakaian rust ada jalur alternatifnya tetapi untuk pattern observable tidak banyak yang berubah jadi untuk kasus
 BambangShop kita tetap membutuhkan interface.
-
-#### Reflection Publisher-2
-Saya cukup percaya penggunaan DashMap sangat dibutuhkan karena adanya key yang unique (yaitu id dan url). Secara umum bentuk id dan url
+2. Saya cukup percaya penggunaan DashMap sangat dibutuhkan karena adanya key yang unique (yaitu id dan url). Secara umum bentuk id dan url
 pasti bukan seperti angka yang incremental dan oleh karena itu penggunaan DashMap cocok karena value bisa diambil dengan custom key yang dibuat
 oleh id dan url.
+3. Kita tetap membutuhkan DashMap karena Singleton sendiri tidak cukup untuk memecahkan masalah concurrency. Ditambah tutorial ini menggunkaan rust dan untuk Singleton itu sangat tidak cocok karena tidak mungkin membuat multiple code mengubah data yang sama di waktu yang sama.
+
+#### Reflection Publisher-2
 
 #### Reflection Publisher-3
-Kita tetap membutuhkan DashMap karena Singleton sendiri tidak cukup untuk memecahkan masalah concurrency. Ditambah tutorial ini menggunkaan rust dan untuk Singleton itu sangat tidak cocok karena tidak mungkin membuat multiple code mengubah data yang sama di waktu yang sama.
+
