@@ -58,12 +58,12 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement delete function in Subscriber repository.`
     -   [x] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [x] Commit: `Create Notification service struct skeleton.`
+    -   [x] Commit: `Implement subscribe function in Notification service.`
+    -   [x] Commit: `Implement subscribe function in Notification controller.`
+    -   [x] Commit: `Implement unsubscribe function in Notification service.`
+    -   [x] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -85,6 +85,13 @@ oleh id dan url.
 3. Kita tetap membutuhkan DashMap karena Singleton sendiri tidak cukup untuk memecahkan masalah concurrency. Ditambah tutorial ini menggunkaan rust dan untuk Singleton itu sangat tidak cocok karena tidak mungkin membuat multiple code mengubah data yang sama di waktu yang sama.
 
 #### Reflection Publisher-2
+1. Meski menurut compund pattern Model terdapat bagian repository dan service, pemisahan repository dan service dari Model ini karena Model seharusnya akan menjadi struktur untuk data. Lalu untuk service dan repository itu melakukan logika. Oleh karena itu menurut saya kode akan semakin berkembang akan semakin kompleks sehingga melakukan pemisahan jadi bisa melihat kode dengan perasaan ringan dan ini mengandung nilai Single Reponsibility Principle.
+
+2. Kita bisa menganalogikan 3 tugas berbeda tetapi hanya dikerjakan oleh satu entinitas seperti misal sebuah pabrik bisa menghasilkan telur ayam, sayuran kentang, dan gir mobil. Pabrik tersebut pasti akan berantakan dan tidak berjalan secara efisien.
+
+Misal jika hanya Model berarti selain mengurus data struktur, maka model juga harus mengatur logika pula.Sebagai contoh: `Subscriber` harus mengurus logika `Notification`, maka perubahan pada sistem notifikasi memiliki resiko pada kode di dalam `Subscriber`.
+
+3. Saat mengerjakan part 2 bagian Main, saya belum terlalu explore jauh menggunakan Postman tetapi karena dibilang bahwa punya potensi untuk berguna untuk Group Project maka saya akan explore segera.
 
 #### Reflection Publisher-3
 
